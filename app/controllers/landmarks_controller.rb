@@ -10,5 +10,9 @@ class LandmarksController < ApplicationController
     @landmark.save
   end
 
+  get '/landmarks' do
+    
+  end
+
 
 end
