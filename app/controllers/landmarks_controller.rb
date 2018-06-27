@@ -27,7 +27,6 @@ class LandmarksController < ApplicationController
 
 
     erb :'landmarks/edit'
-
   end
 
 
