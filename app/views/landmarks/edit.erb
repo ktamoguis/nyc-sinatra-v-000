@@ -3,8 +3,9 @@
 <form action="/landmarks/<%= @landmark.id %>" method="POST">
   <input type="hidden" name="_method" value="PATCH">
 
-  <p>Landmark Name:<input type="text" name="figure[name]" id="name" value="<%= @landmark.name %>"></p>
-
+  <p>Landmark Name:<input type="text" name="name" id="name" value="<%= @landmark.name %>"></p>
+  <p>Year Completed:<input type="text" name="year_completed" id="year_completed" value="<%= @landmark.year_completed %>"</p>
+  
   <h4>Titles</h4>
   <% @titles.each do |title| %>
     <input type="checkbox" name="figure[title_ids]"><%=title.name%></input>
