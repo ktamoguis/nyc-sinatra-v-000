@@ -48,6 +48,13 @@ class FiguresController < ApplicationController
   end
 
   patch '/figures/:figure_id' do
+
+    if params[:landmark][:name] == ""
+    else
+      @newlandmark = Landmark.create(name: params[:landmark][:name])
+      @newlandmark.save
+      @figure.landmarks << @newlandmark
+    end
     
   end
 
