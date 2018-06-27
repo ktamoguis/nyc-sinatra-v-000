@@ -16,5 +16,7 @@ class LandmarksController < ApplicationController
     erb :'landmarks/index'
   end
 
+  get '/landmarks/:landmark_id'
+
 
 end
