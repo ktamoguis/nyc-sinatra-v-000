@@ -59,6 +59,8 @@ class FiguresController < ApplicationController
       @figure.landmarks << @newlandmark
     end
 
+    binding.pry
+
     @figure.save
 
   end
