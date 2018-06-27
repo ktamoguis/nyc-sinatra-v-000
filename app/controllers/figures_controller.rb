@@ -62,6 +62,7 @@ class FiguresController < ApplicationController
 
     binding.pry
     @figure.save
+    binding.pry
 
     redirect("/figures/#{@figure.id}")
 
