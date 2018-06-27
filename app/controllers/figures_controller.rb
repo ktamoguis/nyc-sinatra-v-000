@@ -49,7 +49,6 @@ class FiguresController < ApplicationController
   end
 
   patch '/figures/:figure_id' do
-    binding.pry
     @figure = Figure.all.find_by(id: params[:figure_id])
     @figure.update(name: params[:figure_name])
 
@@ -60,9 +59,7 @@ class FiguresController < ApplicationController
       @figure.landmarks << @newlandmark
     end
 
-    binding.pry
     @figure.save
-    binding.pry
 
     redirect("/figures/#{@figure.id}")
 
