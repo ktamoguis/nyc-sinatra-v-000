@@ -33,6 +33,7 @@ class LandmarksController < ApplicationController
     @landmark = Landmark.all.find_by(id: params[:landmark_id])
     @landmark.update(name: params[name:], year_completed: params[:year_completed])
 
+    redirect("/landmarks/#{@landmark.id}")
   end
 
 
