@@ -12,11 +12,13 @@ class LandmarksController < ApplicationController
 
   get '/landmarks' do
     @landmarks = Landmark.all
-    
+
     erb :'landmarks/index'
   end
 
-  get '/landmarks/:landmark_id'
+  get '/landmarks/:landmark_id' do
+    @landmark = Landmark.all.find_by(id: params[:landmark_id])
+  end
 
 
 end
