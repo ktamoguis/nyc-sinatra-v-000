@@ -48,7 +48,8 @@ class FiguresController < ApplicationController
   end
 
   patch '/figures/:figure_id' do
-    @figure = Figure.all.find_by(id: params[:figure_id]) 
+    @figure = Figure.all.find_by(id: params[:figure_id])
+    @figure.update(params[:figure_name])
 
     if params[:new_landmark] == ""
     else
