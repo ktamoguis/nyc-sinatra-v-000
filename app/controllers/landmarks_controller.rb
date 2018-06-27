@@ -23,10 +23,11 @@ class LandmarksController < ApplicationController
   end
 
   get '/landmarks/:landmark_id/edit' do
+    @landmark = Landmark.all.find_by(id: params[:landmark_id])
     
   end
 
-  
+
 
 
 end
