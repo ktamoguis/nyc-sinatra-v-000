@@ -48,6 +48,7 @@ class FiguresController < ApplicationController
   end
 
   patch '/figures/:figure_id' do
+    @figure = Figure.all.find_by(id: params[:figure_id]) 
 
     if params[:new_landmark] == ""
     else
