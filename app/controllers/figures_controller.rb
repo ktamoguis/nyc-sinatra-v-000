@@ -43,7 +43,7 @@ class FiguresController < ApplicationController
 
   get '/figures/:figure_id/edit' do
     @figure = Figure.all.find_by(id: params[:figure_id])
-    @title = Title.all
+    @titles = Title.all
 
     erb :"figures/edit"
   end

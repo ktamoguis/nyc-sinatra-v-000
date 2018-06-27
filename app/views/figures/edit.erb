@@ -6,7 +6,7 @@
   <p>Figure Name:<input type="text" name="figure[name]" id="figure_name" value="<%= @figure.name %>"></p>
 
   <h4>Titles</h4>
-  <% @figure.titles.each do |title| %>
+  <% @titles.each do |title| %>
     <input type="checkbox" name="figure[title_ids]"><%=title.name%></input>
   <%end%>
 
