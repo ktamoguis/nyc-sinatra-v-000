@@ -45,7 +45,6 @@ class FiguresController < ApplicationController
     @figure = Figure.all.find_by(id: params[:figure_id])
 
     erb :"figures/edit"
-
   end
 
 end
