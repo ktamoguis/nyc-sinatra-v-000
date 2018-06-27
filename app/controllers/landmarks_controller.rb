@@ -29,6 +29,8 @@ class LandmarksController < ApplicationController
   end
 
   patch '/landmarks/:landmark_id' do
+    @landmark = Landmark.all.find_by(id: params[:landmark_id])
+    @landmark.update(name: params[name:], year_completed: params[:year_completed])
     
   end
 
