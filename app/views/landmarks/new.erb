@@ -12,11 +12,6 @@
   <h4>and/or Create a New Title</h4>
   <input type="text" name="title[name]" id="new_title"><br>
 
-  <h4>Landmarks</h4>
-  <%@landmarks.each do |landmark|%>
-    <input type="checkbox" name="figure[landmark_ids][]" value="<%=landmark.id%>" id="landmark_<%=landmark.id%>"><%=landmark.name%></input>
-  <%end%>
-
   <h4>and/or Create a New Landmark</h4>
   <input type="text" name="landmark[name]" id="new_landmark"><br>
 
